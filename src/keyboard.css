@@ -1,0 +1,118 @@
+keyboard {
+  font-family: sans-serif;
+}
+
+key qwerty, key colemak {
+  display: none;
+}
+
+keyboard.qwerty key qwerty {
+  display: block;
+}
+
+keyboard.colemak key colemak {
+  display: block;
+}
+
+row {
+  display: flex;
+  flex-direction: row;
+}
+
+key {
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #ccc;
+  border: 1px solid #666;
+  position: relative;
+  font-size: 18px;
+}
+
+key.active {
+  background-color: #fcc;
+}
+
+/* Special */
+
+key.Backspace {
+  width: 80px;
+}
+
+key.Tab {
+  width: 80px;
+}
+
+key.CapsLock {
+  width: 95px;
+}
+
+key.Enter {
+  width: 95px;
+}
+
+key.ShiftLeft, key.ShiftRight{
+  width: 125px;
+}
+
+key.ControlLeft, key.ControlRight, key.AltLeft, key.AltRight {
+  width: 80px;
+}
+
+key.Space {
+  width: 500px;
+}
+
+.symbol {
+  font-size: 16px;
+  line-height: 65px;
+}
+
+key small {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  line-height: normal;
+}
+
+key mark {
+  position: absolute;
+  bottom: 5px;
+  width: 15px;
+  border-bottom: 1px solid #666;
+}
+
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+tab {
+  cursor: pointer;
+  border: 1px solid #666;
+  padding: 4px;
+  margin: 5px;
+}
+
+tab.active {
+  background-color: #fcc;
+}
+
+textarea {
+  width: 500px;
+  height: 300px;
+}

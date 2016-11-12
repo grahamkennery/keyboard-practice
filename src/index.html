@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <title>Colemak Helper</title>
+
+  <link rel="stylesheet" type="text/css" href="keyboard.css"/>
+</head>
+<body>
+  <tabs>
+    <tab id="colemak-tab" class="active">Colemak</tab>
+    <tab id="qwerty-tab">QWERTY</tab>
+  </tabs>
+
+  <keyboard class="colemak">
+    <row>
+      <key class="symbol Backquote"><small>~</small>`</key>
+      <key class="symbol Digit1"><small>!</small>1</key>
+      <key class="symbol Digit2"><small>@</small>2</key>
+      <key class="symbol Digit3"><small>#</small>3</key>
+      <key class="symbol Digit4"><small>$</small>4</key>
+      <key class="symbol Digit5"><small>%</small>5</key>
+      <key class="symbol Digit6"><small>^</small>6</key>
+      <key class="symbol Digit7"><small>&amp;</small>7</key>
+      <key class="symbol Digit8"><small>*</small>8</key>
+      <key class="symbol Digit9"><small>(</small>9</key>
+      <key class="symbol Digit0"><small>)</small>0</key>
+      <key class="symbol Minus"><small>_</small>-</key>
+      <key class="symbol Equal"><small>+</small>=</key>
+      <key class="Backspace"></key>
+    </row>
+
+    <row>
+      <key class="Tab"></key>
+      <key class="KeyQ">q</key>
+      <key class="KeyW">w</key>
+      <key class="KeyE"><colemak>f</colemak><qwerty>e</qwerty></key>
+      <key class="KeyR"><colemak>p</colemak><qwerty>r</qwerty></key>
+      <key class="KeyT"><colemak>g</colemak><qwerty>t</qwerty></key>
+      <key class="KeyY"><colemak>j</colemak><qwerty>y</qwerty></key>
+      <key class="KeyU"><colemak>l</colemak><qwerty>u</qwerty></key>
+      <key class="KeyI"><colemak>u</colemak><qwerty>i</qwerty></key>
+      <key class="KeyO"><colemak>y</colemak><qwerty>o</qwerty></key>
+      <key class="KeyP"><colemak class="symbol"><small>:</small>;</colemak><qwerty>p</qwerty></key>
+      <key class="symbol BracketLeft"><small>{</small>[</key>
+      <key class="symbol BracketRight"><small>}</small>]</key>
+      <key class="symbol Backslash"><small>|</small>\</key>
+    </row>
+
+    <row>
+      <key class="caps CapsLock"></key>
+      <key class="KeyA">a</key>
+      <key class="KeyS"><colemak>r</colemak><qwerty>s</qwerty></key>
+      <key class="KeyD"><colemak>s</colemak><qwerty>d</qwerty></key>
+      <key class="KeyF"><colemak>t</colemak><qwerty>f</qwerty><mark></mark></key>
+      <key class="KeyG"><colemak>d</colemak><qwerty>g</qwerty></key>
+      <key class="KeyH"><colemak>h</colemak><qwerty>h</qwerty></key>
+      <key class="KeyJ"><colemak>n</colemak><qwerty>j</qwerty><mark></mark></key>
+      <key class="KeyK"><colemak>e</colemak><qwerty>k</qwerty></key>
+      <key class="KeyL"><colemak>i</colemak><qwerty>l</qwerty></key>
+      <key class="Semicolon"><colemak>o</colemak><qwerty class="symbol"><small>:</small>;</qwerty></key>
+      <key class="symbol Quote"><small>"</small>'</key>
+      <key class="Enter"></key>
+    </row>
+
+    <row>
+      <key class="ShiftLeft"></key>
+      <key class="KeyZ">z</key>
+      <key class="KeyX">x</key>
+      <key class="KeyC">c</key>
+      <key class="KeyV">v</key>
+      <key class="KeyB">b</key>
+      <key class="KeyN"><colemak>k</colemak><qwerty>n</qwerty></key>
+      <key class="KeyM">m</key>
+      <key class="symbol Comma"><small>&lt;</small>,</key>
+      <key class="symbol Period"><small>&gt;</small>.</key>
+      <key class="symbol Slash"><small>?</small>/</key>
+      <key class="ShiftRight"></key>
+    </row>
+
+    <row>
+      <key class="ControlLeft"></key>
+      <key class="AltLeft"></key>
+      <key class="Space"></key>
+      <key class="AltRight"></key>
+      <key class="ControlRight"></key>
+    </row>
+  </keyboard>
+
+  <textarea></textarea>
+
+  <script>
+
+
+    document.body.addEventListener('keydown', e => down('.' + e.code));
+    document.body.addEventListener('keyup', e => up('.' + e.code));
+    document.querySelector('#colemak-tab').addEventListener('click', changeLayout.bind(null, 'colemak'));
+    document.querySelector('#qwerty-tab').addEventListener('click', changeLayout.bind(null, 'qwerty'));
+
+    function changeLayout(layout) {
+      document.querySelectorAll('tab').forEach(el => el.classList.remove('active'));
+      document.querySelector('#' + layout + '-tab').classList.add('active');
+
+      var keyboard = document.querySelector('keyboard');
+      keyboard.className = layout;
+    }
+
+    function down(key) {
+      var keys = document.querySelectorAll(key);
+
+      keys.forEach(el => el.classList.add('active'));
+    }
+
+    function up(key) {
+      var keys = document.querySelectorAll(key);
+
+      keys.forEach(el => el.classList.remove('active'));
+    }
+  </script>
+</body>
+</html>
