@@ -93,7 +93,6 @@
 
   <script>
 
-
     document.body.addEventListener('keydown', e => down('.' + e.code));
     document.body.addEventListener('keyup', e => up('.' + e.code));
     document.querySelector('#colemak-tab').addEventListener('click', changeLayout.bind(null, 'colemak'));
@@ -118,6 +117,7 @@
 
       keys.forEach(el => el.classList.remove('active'));
     }
+
   </script>
 </body>
 </html>
