@@ -2,7 +2,6 @@
   "name": "keyboard-practice",
   "version": "1.0.0",
   "description": "Practice that typing!",
-  "main": "index.js",
   "scripts": {
     "test": "semistandard",
     "start": "http-server ./src -o"
