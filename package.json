@@ -4,7 +4,8 @@
   "description": "Practice that typing!",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard"
+    "test": "semistandard",
+    "start": "http-server ./src -o"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/grahamkennery/keyboard-practice#readme",
   "dependencies": {
     "dev": "^0.1.3",
+    "http-server": "^0.9.0",
     "semistandard": "^9.2.1"
   }
 }
