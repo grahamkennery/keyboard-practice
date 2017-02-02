@@ -8,3 +8,13 @@ Currently supports:
 - QWERTY
 - Colemak
 
+## Requirements
+* [yarn](https://yarnpkg.com/)
+
+## How to run
+```bash
+yarn install
+yarn start
+```
+
+
