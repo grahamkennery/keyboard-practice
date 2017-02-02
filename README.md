@@ -1,4 +1,4 @@
-# Keyboard Practice
+# Keyboard Practice [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=plastic)](https://github.com/Flet/semistandard)
 
 This is a simple web application to help learn new keyboard layouts!
 
