@@ -3,7 +3,7 @@
 <head>
   <title>Keyboard Practice</title>
 
-  <link rel="stylesheet" type="text/css" href="keyboard.css"/>
+  <link rel="stylesheet" type="text/css" href="./keyboard.css"/>
 </head>
 <body>
 
@@ -91,33 +91,7 @@
 
   <textarea></textarea>
 
-  <script>
+  <script src="./keyboard.js"></script>
 
-    document.body.addEventListener('keydown', e => down('.' + e.code));
-    document.body.addEventListener('keyup', e => up('.' + e.code));
-    document.querySelector('#colemak-tab').addEventListener('click', changeLayout.bind(null, 'colemak'));
-    document.querySelector('#qwerty-tab').addEventListener('click', changeLayout.bind(null, 'qwerty'));
-
-    function changeLayout(layout) {
-      document.querySelectorAll('tab').forEach(el => el.classList.remove('active'));
-      document.querySelector('#' + layout + '-tab').classList.add('active');
-
-      var keyboard = document.querySelector('keyboard');
-      keyboard.className = layout;
-    }
-
-    function down(key) {
-      var keys = document.querySelectorAll(key);
-
-      keys.forEach(el => el.classList.add('active'));
-    }
-
-    function up(key) {
-      var keys = document.querySelectorAll(key);
-
-      keys.forEach(el => el.classList.remove('active'));
-    }
-
-  </script>
 </body>
 </html>
