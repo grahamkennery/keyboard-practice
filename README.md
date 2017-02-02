@@ -1,4 +1,4 @@
-# Keyboard Practice [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=plastic)](https://github.com/Flet/semistandard)
+# Keyboard Practice [![Build Status](https://travis-ci.org/grahamkennery/keyboard-practice.svg?branch=master)](https://travis-ci.org/grahamkennery/keyboard-practice) [![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=plastic)](https://github.com/Flet/semistandard)
 
 This is a simple web application to help learn new keyboard layouts!
 
